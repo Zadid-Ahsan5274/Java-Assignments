@@ -16,7 +16,7 @@
 ## How to run this project
 - clone this project
 - open eclipse -> import the cloned project
-- inside the lib folder, find the src/main/java package -> inside this package, multiple packages are created
+- inside the lib folder, find the src/main/java package -> inside this package, multiple packages are created -> inside these packages, find the source code files
 - right click on the source file you want to run -> run as a java application
 
 ## Prerequisites
