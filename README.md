@@ -6,6 +6,10 @@
 - Gradle(Build Automation Tool)
 
 ## Topics Covered
+- Conditional Statements
+- Loops
+- Switch statements
+- Break and continue
 - Functions
 - Arrays
 - Arraylists
