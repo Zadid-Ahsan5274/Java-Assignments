@@ -57,7 +57,7 @@ public class AverageEvenOdd {
 			System.out.println("Number of Odd numbers: " + countOddNumbers(arr));
 		} catch (Exception e) {
 			System.out.println("Caught the exception " + e);
-			;
+			
 		}
 	}
 }
