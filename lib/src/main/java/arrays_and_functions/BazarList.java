@@ -13,8 +13,8 @@ import java.util.HashMap;
 
 public class BazarList {
 
-	public static void searchItem(String item) {
-		HashMap<String, Integer> todaysBazarList = new HashMap<String, Integer>();
+	public static HashMap<String, Integer> todaysBazarList = new HashMap<String, Integer>();
+	static {
 		todaysBazarList.put("Rice", 315);
 		todaysBazarList.put("Meat", 300);
 		todaysBazarList.put("Potato", 40);
@@ -23,6 +23,9 @@ public class BazarList {
 		todaysBazarList.put("Lentil", 135);
 		todaysBazarList.put("Breads", 70);
 		todaysBazarList.put("Onion", 120);
+	}
+
+	public static void searchItem(String item) {
 		if (todaysBazarList.containsKey(item)) {
 			System.out.println("Price of " + item + " is " + todaysBazarList.get(item));
 		} else {
@@ -31,15 +34,6 @@ public class BazarList {
 	}
 
 	public static int totalSum() {
-		HashMap<String, Integer> todaysBazarList = new HashMap<String, Integer>();
-		todaysBazarList.put("Rice", 315);
-		todaysBazarList.put("Meat", 300);
-		todaysBazarList.put("Potato", 40);
-		todaysBazarList.put("Fish", 379);
-		todaysBazarList.put("Egg", 140);
-		todaysBazarList.put("Lentil", 135);
-		todaysBazarList.put("Breads", 70);
-		todaysBazarList.put("Onion", 120);
 		int sum = 0;
 		for (int value : todaysBazarList.values()) {
 			sum = sum + value;
@@ -48,17 +42,7 @@ public class BazarList {
 	}
 
 	public static void main(String[] args) {
-
-		HashMap<String, Integer> todaysBazarList = new HashMap<String, Integer>();
-		todaysBazarList.put("Rice", 315);
-		todaysBazarList.put("Meat", 300);
-		todaysBazarList.put("Potato", 40);
-		todaysBazarList.put("Fish", 379);
-		todaysBazarList.put("Egg", 140);
-		todaysBazarList.put("Lentil", 135);
-		todaysBazarList.put("Breads", 70);
-		todaysBazarList.put("Onion", 120);
-		searchItem("Meat");
+		searchItem("Lentil");
 		System.out.println("Total price of the items: " + totalSum());
 	}
 
