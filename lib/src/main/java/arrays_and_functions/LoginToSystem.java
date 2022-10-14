@@ -10,8 +10,7 @@ import java.util.Scanner;
 
 public class LoginToSystem {
 
-	public static void main(String[] args) {
-
+	public static void loginToSystem() {
 		try {
 			Scanner input = new Scanner(System.in);
 			String username;
@@ -59,5 +58,10 @@ public class LoginToSystem {
 		} catch (Exception e) {
 			System.out.println("Please enter valid data: " + e);
 		}
+	}
+
+	public static void main(String[] args) {
+
+		loginToSystem();
 	}
 }
