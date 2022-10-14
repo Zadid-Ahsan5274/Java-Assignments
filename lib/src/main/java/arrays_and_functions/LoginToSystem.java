@@ -60,8 +60,9 @@ public class LoginToSystem {
 		}
 	}
 
-	public static void main(String[] args) {
-
+	public static void main(String[] args) throws InterruptedException {
+		System.out.println("Login process starting...");
+		Thread.sleep(5000);
 		loginToSystem();
 	}
 }
