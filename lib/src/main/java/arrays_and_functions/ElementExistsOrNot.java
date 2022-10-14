@@ -22,14 +22,25 @@ public class ElementExistsOrNot {
 			Scanner user_input = new Scanner(System.in);
 			System.out.print("Enter element to check: ");
 			int number = user_input.nextInt();
+			boolean flag = false;
 			for (int i = 0; i < myArray.length; i++) {
-				if (myArray[i] == number) {
-					System.out.println("Found in the position " + i);
-					break;
-				} else {
+				if (number == myArray[i]) {
+					flag = true;
+				} else if (number != myArray[i]) {
+					flag = false;
+					continue;
+				}
+
+				if (flag == true) {
+					System.out.println("Found element at position " + i);
+				}
+
+				else if (flag == false) {
 					System.out.println("Found no element");
 				}
+
 			}
+
 		} catch (Exception e) {
 			System.out.println("Caught the exception " + e);
 		}
