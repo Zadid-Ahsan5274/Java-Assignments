@@ -55,6 +55,10 @@ public class GuessingGame {
 					System.out.println("Sorry, better luck next time");
 				}
 				i++;
+				if (i >= 5) {
+					System.out.println("You have incorrect guess for 5 times. Better luck next time!");
+					break;
+				}
 			}
 
 		} catch (Exception e) {
