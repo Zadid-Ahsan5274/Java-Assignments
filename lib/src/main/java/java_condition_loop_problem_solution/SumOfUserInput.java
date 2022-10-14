@@ -12,16 +12,15 @@ public class SumOfUserInput {
 		char choice;
 		try {
 			while (true) {
-				System.out.print("Wish to continue?: ");
+				System.out.print("Press \"Y\" or \"y\" or \"q\"to continue: ");
 				choice = user_input.next().charAt(0);
-				if (choice == 'Y' || choice == 'y') {
+				if (choice != 'q') {
 					System.out.print("Enter a number: ");
 					int number = user_input.nextInt();
 					sum = sum + number;
 				} else if (choice == 'q') {
+					System.out.println("You have enetered " + choice + ". Exiting the code");
 					break;
-				} else {
-					System.out.println("Please enter \"Y\" or \"y\" or \"q\" to continue...");
 				}
 			}
 			System.out.println("sum = " + sum);
