@@ -23,24 +23,24 @@ public class ElementExistsOrNot {
 			System.out.print("Enter element to check: ");
 			int number = user_input.nextInt();
 			boolean flag = false;
+			int index = 0;
 			for (int i = 0; i < myArray.length; i++) {
-				if (number == myArray[i]) {
-					flag = true;
-				} else if (number != myArray[i]) {
+				if( myArray[i] != number){
 					flag = false;
-					continue;
-				}
-
-				if (flag == true) {
-					System.out.println("Found element at position " + i);
-				}
-
-				else if (flag == false) {
-					System.out.println("Found no element");
+					//continue;
+				} else if(myArray[i] == number){
+					flag = true;
+					index = i;
+					break;
 				}
 
 			}
-
+			if (flag == true) {
+				System.out.println("Found element at position " + index);
+			}
+			else if (flag == false) {
+				System.out.println("Found no element");
+			}
 		} catch (Exception e) {
 			System.out.println("Caught the exception " + e);
 		}
