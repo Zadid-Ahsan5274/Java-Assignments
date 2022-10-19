@@ -14,7 +14,7 @@ public class AverageEvenOdd {
 		for (int i = 0; i < arr.length; i++) {
 			sum = sum + arr[i];
 		}
-		double average = (sum / 5);
+		double average = (sum / 5);   // dividing by 5 as it's mentioned in the problem
 		return average;
 	}
 
@@ -42,7 +42,7 @@ public class AverageEvenOdd {
 		try {
 			Scanner input = new Scanner(System.in);
 			System.out.print("Enter array limit: ");
-			int limit = input.nextInt();
+			int limit = input.nextInt();  // input limit will be 5
 			int arr[] = new int[limit];
 			for (int i = 0; i < limit; i++) {
 				System.out.print("Enter array element: ");
