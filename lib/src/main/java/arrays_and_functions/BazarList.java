@@ -9,6 +9,7 @@
 
 package arrays_and_functions;
 
+import java.util.Scanner;
 import java.util.HashMap;
 
 public class BazarList {
@@ -42,8 +43,15 @@ public class BazarList {
 	}
 
 	public static void main(String[] args) {
-		searchItem("Lentil");
-		System.out.println("Total price of the items: " + totalSum());
+		try {
+			Scanner user_input = new Scanner(System.in);
+			System.out.print("Please enter an item to search: ");
+			String item_to_search = user_input.nextLine();
+			searchItem(item_to_search);
+			System.out.println("Total price of the items: " + totalSum());
+		}catch(Exception e){
+			System.out.println("Please enter a valid item name: "+e);
+		}
 	}
 
 }
